@@ -1,6 +1,7 @@
 #include<stdio.h>
+#include<stdio.h>
 #include<time.h>
-int fib(int n)
+long double fib(long double n)
 {
    if (n <= 1)
       return n;
@@ -9,10 +10,10 @@ int fib(int n)
  
 int main ()
 {
+  long double n=40;
   double time_spent=0.0;  
   clock_t begin = clock();
-  int n = 40;
-  printf("%d", fib(n));
+  printf("%Lf", fib(n));
   clock_t end = clock();
   time_spent = (double)(end-begin)/CLOCKS_PER_SEC;
   printf(" %f ", time_spent);
