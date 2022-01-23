@@ -2,7 +2,7 @@
 #include<time.h>   
 int main()    
 {    
- int n1,n2,n3,i; 
+ long double n1,n2,n3,i; 
  double time_spent=0.0;  
  clock_t begin = clock(); 
  printf("\n%d %d",0,1);
@@ -13,10 +13,10 @@ int main()
   n3=n1+n2;
   n1=n2;
   n2=n3;
-  printf(" %d ",n3);        
+  printf(" %Lf ",n3);        
  }  
  clock_t end = clock();
  time_spent = (double)(end-begin)/CLOCKS_PER_SEC;
- printf("%f", time_spent);
+ printf("\n%f", time_spent);
   return 0;  
  }
