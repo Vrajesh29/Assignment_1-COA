@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<stdio.h>
 #include<time.h>
 long double fib(long double n)
 {
