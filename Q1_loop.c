@@ -2,16 +2,18 @@
 #include<time.h>   
 int main()    
 {    
- int F[99],i; 
+ int n1,n2,n3,i; 
  double time_spent=0.0;  
  clock_t begin = clock(); 
  printf("\n%d %d",0,1);
- F[0]=0;
- F[1]=1;   
+ n1=0;
+ n2=1;   
  for(i=2;i<100;++i) 
  {    
-  F[i]=F[i-1]+F[i-2];    
-  printf(" %d ",F[i]);        
+  n3=n1+n2;
+  n1=n2;
+  n2=n3;
+  printf(" %d ",n3);        
  }  
  clock_t end = clock();
  time_spent = (double)(end-begin)/CLOCKS_PER_SEC;
